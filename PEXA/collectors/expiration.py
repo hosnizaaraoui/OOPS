@@ -1,14 +1,11 @@
 from datetime import datetime, date
-import subprocess
-
-from hosts.local import LocalHost
+from hosts.base import Host
 
 
-def get_password_expiration(host: LocalHost, username: str) -> str:
+async def get_password_expiration(host: Host, username: str) -> str:
     try:
-        output = host.execute(
-            ["chage", "-li", username])
-
+        output = await host.execute(
+            ["sudo", "chage", "-li", username])
         for line in output.splitlines():
             if line.startswith("Password expires"):
 

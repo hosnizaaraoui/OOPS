@@ -1,6 +1,7 @@
 import asyncio
 import os
 
+from models.host import HostModel
 from collectors.passwd import filter_human_users
 from collectors.expiration import get_password_expiration
 from reports.console import print_report
@@ -14,10 +15,14 @@ async def main():
     full_register = []
     for host in hosts:
         users = filter_human_users(await host.load_file("/etc/passwd"))
+
+        host_register = HostModel()
         for user in users:
-            user.host = host.hostname
+            host_register.hostname = host.hostname
             user.expires = await get_password_expiration(host, user.username)
-            full_register.append(user)
+            host_register.users.append(user)
+
+        full_register.append(host_register)
     print_report(full_register)
 
 

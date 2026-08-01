@@ -21,7 +21,7 @@ The goal of this repository is to:
 
 ---
 
-# Projects
+## Projects
 
 | Ticket | Project  | Description                 | Status        |
 | ------ | -------- | --------------------------- | ------------- |
@@ -29,13 +29,13 @@ The goal of this repository is to:
 
 ---
 
-# Ticket #001 — PEXA
+## Ticket #001 — PEXA
 
 PEXA (Password Expiration Auditor) automates password expiration audits across multiple Linux servers.
 
 ---
 
-# Why OOPS?
+## Why OOPS?
 
 System administrators spend a significant amount of time performing repetitive operational tasks.
 
@@ -59,7 +59,7 @@ See:
 
 ---
 
-# Contributing
+## Contributing
 
 Ideas, improvements, bug reports, and new automation scripts are always welcome.
 
@@ -67,6 +67,6 @@ Feel free to open an Issue or submit a Pull Request.
 
 ---
 
-# License
+## License
 
 This project is licensed under the MIT License.

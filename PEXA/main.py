@@ -117,7 +117,7 @@ def cli():
     "--output",
     default="audit_report",
     show_default=True,
-    help="Output filename (without extension unless explicitly provided). Used with --export."
+    help="Output filename without extension. Used with --export."
 )
 @click.option(
     "-v",

@@ -51,9 +51,9 @@ OOPS/
 
 # Projects
 
-| Ticket | Project  | Description                 | Status       |
-| ------ | -------- | --------------------------- | ------------ |
-| #001   | **PEXA** | Password Expiration Auditor | ✅ Completed |
+| Ticket | Project                    | Description                 | Status        |
+| ------ | -------------------------- | --------------------------- | ------------- |
+| #001   | **[PEXA](PEXA/README.md)** | Password Expiration Auditor | [x] Completed |
 
 ---
 
@@ -79,9 +79,7 @@ PEXA (Password Expiration Auditor) automates password expiration audits across m
 
 See:
 
-```
-pexa/README.md
-```
+**[Ticket #001 - PEXA](PEXA/README.md)**
 
 ---
 

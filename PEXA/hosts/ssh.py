@@ -25,7 +25,7 @@ class SSHHost(Host):
         except:
             raise
 
-    async def load_file(self, file: str):
+    async def read_file(self, file: str):
         try:
             async with asyncssh.connect(
                 self.hostname,

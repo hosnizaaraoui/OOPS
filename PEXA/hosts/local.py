@@ -14,6 +14,6 @@ class LocalHost(Host):
             text=True
         )
 
-    async def load_file(self, file: str):
+    async def read_file(self, file: str):
         with open(file) as f:
             return f.readlines()

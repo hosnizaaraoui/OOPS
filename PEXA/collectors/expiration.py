@@ -12,7 +12,7 @@ async def get_password_expiration(host: Host, username: str) -> str:
                 expires = line.split(":", 1)[1].strip()
 
                 if expires == "never":
-                    return expires
+                    return None, None
 
                 today = date.today()
                 exp = datetime.strptime(
@@ -20,7 +20,7 @@ async def get_password_expiration(host: Host, username: str) -> str:
                     "%Y-%m-%d"
                 ).date()
 
-                return f"{(exp - today).days} day(s)"
+                return exp, (exp - today).days
 
     except Exception:
         pass

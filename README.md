@@ -21,80 +21,17 @@ The goal of this repository is to:
 
 ---
 
-# Repository Structure
-
-```
-OOPS/
-│
-├── assets/
-│   ├── banner.png
-│   └── screenshots/
-│
-├── docs/
-│
-├── pexa/
-│   ├── README.md
-│   ├── collectors/
-│   ├── filters/
-│   ├── hosts/
-│   ├── models/
-│   ├── reports/
-│   ├── utils/
-│   └── main.py
-│
-├── README.md
-├── LICENSE
-└── CONTRIBUTING.md
-```
-
----
-
 # Projects
 
-| Ticket | Project                    | Description                 | Status        |
-| ------ | -------------------------- | --------------------------- | ------------- |
-| #001   | **[PEXA](PEXA/README.md)** | Password Expiration Auditor | [x] Completed |
+| Ticket | Project  | Description                 | Status        |
+| ------ | -------- | --------------------------- | ------------- |
+| #001   | **PEXA** | Password Expiration Auditor | [x] Completed |
 
 ---
 
 # Ticket #001 — PEXA
 
 PEXA (Password Expiration Auditor) automates password expiration audits across multiple Linux servers.
-
-### Features
-
-- Audit local and remote Linux hosts
-- SSH-based execution using AsyncSSH
-- Inventory file support
-- Ignore system accounts automatically
-- Password expiration analysis
-- Powerful filtering
-- Colored console reports
-- JSON export
-- CSV export
-- HTML export
-- Verbose execution mode
-
-**Documentation**
-
-See:
-
-**[Ticket #001 - PEXA](PEXA/README.md)**
-
----
-
-# Roadmap
-
-## Completed
-
-- [x] Ticket #001 - Password Expiration Auditor (PEXA)
-
-## Planned
-
-- [ ] Ticket #002
-- [ ] Ticket #003
-- [ ] Ticket #004
-- [ ] Ticket #005
 
 ---
 
@@ -111,6 +48,14 @@ Instead of executing the same commands every day, OOPS focuses on building reusa
 - simplify infrastructure management
 
 Every project in this repository is inspired by a realistic administration scenario.
+
+---
+
+**Full Documentation**
+
+See:
+
+**[Documentation](https://hosnizaaraoui.github.io/OOPS/)**
 
 ---
 

@@ -1,5 +1,3 @@
-← **[Back to OOPS](../README.md)**
-
 # PEXA - Password Expiration Auditor
 
 > A Python command-line tool that audits password expiration across multiple Linux hosts, helping system administrators identify expired accounts, upcoming expirations, and generate professional reports.
@@ -13,8 +11,6 @@ PEXA is the first project of the **OOPS (Operations Optimization & Python Script
 It was built around a realistic system administration scenario where an organization manages hundreds of Linux servers and needs a reliable way to monitor password expiration policies.
 
 Instead of manually connecting to every server and checking user accounts, PEXA automates the entire process.
-
----
 
 ## The Scenario
 
@@ -33,9 +29,7 @@ Doing this manually is repetitive, time-consuming, and error-prone.
 
 PEXA performs the audit automatically and generates reports in multiple formats.
 
----
-
-# Features
+## Features
 
 - Audit local and remote Linux hosts
 - SSH support using AsyncSSH
@@ -52,29 +46,19 @@ PEXA performs the audit automatically and generates reports in multiple formats.
 - Clean object-oriented architecture
 - Asynchronous remote execution
 
----
-
-# Requirements
+## Requirements
 
 - Python 3.12+
 - Linux
 - SSH access to remote hosts
 - Passwordless sudo for the `chage` command (or appropriate permissions)
 
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-# Installation
+## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/<username>/OOPS.git
+git clone https://github.com/hosnizaaraoui/OOPS.git
 ```
 
 Move into the project:
@@ -103,9 +87,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
-# Inventory File
+## Inventory File
 
 PEXA accepts an inventory file containing one host per line.
 
@@ -124,9 +106,7 @@ hostname>username
 
 If the username is omitted, the value supplied with `--user` will be used.
 
----
-
-# Usage
+## Usage
 
 Audit hosts from an inventory file:
 
@@ -173,9 +153,7 @@ python main.py audit \
     --verbose
 ```
 
----
-
-# Filtering
+## Filtering
 
 PEXA supports filtering audit results using a simple expression syntax.
 
@@ -199,9 +177,7 @@ Examples:
 
 Multiple filters can be combined.
 
----
-
-# Exporting Reports
+## Exporting Reports
 
 Generate JSON:
 
@@ -252,9 +228,7 @@ This generates:
 weekly_report.html
 ```
 
----
-
-# Example Output
+## Example Output
 
 ```text
 ========================================================================
@@ -312,29 +286,29 @@ Audit completed successfully.
 [00:35:38] SUCCESS JSON report written to '/home/hosni/Desktop/report.json'
 ```
 
----
+## Screenshots
 
-# Screenshots
+### CLI Help
 
-## Console Report
+![CLI](../assets/screenshots/pexa/pexa-help.png){width="600"}
+{ style="text-align: center" }
 
-<p align="center">
-<img src="../assets/screenshots/pexa/console_report.png" alt="Console Report" width="400">
-</p>
+### Console Audit
 
-## HTML Report
+![Console](../assets/screenshots/pexa/pexa-console.png){width="600"}
+{ style="text-align: center" }
 
-<p align="center">
-<img src="../assets/screenshots/pexa/html_report.png" alt="HTML Report" width="400">
-</p>
+### HTML Report
 
-## Verbose Mode
+![HTML](../assets/screenshots/pexa/pexa-html.png){width="600"}
+{ style="text-align: center" }
 
-<p align="center">
-<img src="../assets/screenshots/pexa/verbose.png" alt="Verbose Mode" width="400">
-</p>
+### Verbose Mode
 
-# Project Structure
+![Verbose](../assets/screenshots/pexa/pexa-verbose.png){width="600"}
+{ style="text-align: center" }
+
+## Project Structure
 
 ```
 pexa/
@@ -349,9 +323,7 @@ pexa/
 └── README.md
 ```
 
----
-
-# Future Improvements
+## Future Improvements
 
 Although the initial objectives have been completed, future enhancements may include:
 
@@ -362,16 +334,12 @@ Although the initial objectives have been completed, future enhancements may inc
 - Scheduling support
 - Unit tests
 
----
-
-# Contributing
+## Contributing
 
 Contributions, feature requests, and ideas are always welcome.
 
 If you have an idea for improving PEXA, feel free to open an Issue or submit a Pull Request.
 
----
-
-# License
+## License
 
 PEXA is part of the **OOPS (Operations Optimization & Python Scripts)** repository and is licensed under the MIT License.

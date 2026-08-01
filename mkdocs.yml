@@ -1,0 +1,47 @@
+site_name: OOPS
+site_description: Operations Optimization & Python Scripts
+site_author: Hosni Zaaraoui
+repo_name: OOPS
+repo_url: https://github.com/hosnizaaraoui/OOPS
+
+theme:
+  name: material
+  language: en
+  logo: assets/oops_banner.png
+  favicon: assets/favicon.png
+
+  palette:
+    - scheme: slate
+      primary: black
+      accent: green
+
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: installation.md
+      - Contributing: contributing.md
+  - Projects:
+      - Ticket 001 - PEXA: projects/pexa.md

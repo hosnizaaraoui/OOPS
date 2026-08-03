@@ -1093,29 +1093,29 @@
 <p>If the username is omitted, the value supplied with <code>--user</code> will be used.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>Audit hosts from an inventory file:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span>--inventory<span class="w"> </span>inventory.txt
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span>--inventory<span class="w"> </span>inventory.txt
 </code></pre></div>
 <p>Audit a specific host:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span>--host<span class="w"> </span><span class="m">192</span>.168.1.20
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span>--host<span class="w"> </span><span class="m">192</span>.168.1.20
 </code></pre></div>
 <p>Audit multiple hosts:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--host<span class="w"> </span>web01<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--host<span class="w"> </span>db01<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--host<span class="w"> </span>mail01
 </code></pre></div>
 <p>Specify the SSH username:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="w"> </span>admin
 </code></pre></div>
 <p>Exclude the local machine:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--exclude-localhost
 </code></pre></div>
 <p>Enable verbose mode:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--verbose
 </code></pre></div>
@@ -1133,29 +1133,29 @@
 <p>Multiple filters can be combined.</p>
 <h2 id="exporting-reports">Exporting Reports<a class="headerlink" href="#exporting-reports" title="Permanent link">&para;</a></h2>
 <p>Generate JSON:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--export<span class="w"> </span>json
 </code></pre></div>
 <p>Generate CSV:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--export<span class="w"> </span>csv
 </code></pre></div>
 <p>Generate HTML:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--export<span class="w"> </span>html
 </code></pre></div>
 <p>Generate multiple reports simultaneously:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--export<span class="w"> </span>json<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--export<span class="w"> </span>csv<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--export<span class="w"> </span>html
 </code></pre></div>
 <p>Specify the output filename:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>.venv/bin/python3<span class="w"> </span>main.py<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--inventory<span class="w"> </span>inventory.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--export<span class="w"> </span>html<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--output<span class="w"> </span>weekly_report

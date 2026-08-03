@@ -23,15 +23,30 @@ The goal of this repository is to:
 
 ## Projects
 
-| Ticket | Project  | Description                 | Status        |
-| ------ | -------- | --------------------------- | ------------- |
-| #001   | **PEXA** | Password Expiration Auditor | [x] Completed |
+| Ticket | Project     | Description                 | Status        |
+| ------ | ----------- | --------------------------- | ------------- |
+| #001   | **PEXA**    | Password Expiration Auditor | [x] Completed |
+| #002   | **STAyzer** | SSH Trust Analyzer          | [] Planned    |
 
 ---
 
 ## Ticket #001 — PEXA
 
 PEXA (Password Expiration Auditor) automates password expiration audits across multiple Linux servers.
+
+## Ticket #002 – STAyzer
+
+STAyzer (SSH Trust Analyzer) audits SSH trust relationships across Linux servers by analyzing users' `authorized_keys` files. It identifies which public keys are authorized on each server, detects duplicate keys shared between users or hosts, and builds a trust map showing where SSH access has been granted.
+
+### Planned Features
+
+- Audit multiple Linux servers over SSH
+- Discover all `authorized_keys` files
+- Parse and fingerprint authorized public keys
+- Detect duplicate public keys across users and servers
+- Build a server-to-key trust map
+- Export reports in JSON, CSV, and HTML
+- Generate summary statistics and security findings
 
 ---
 

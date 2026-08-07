@@ -40,10 +40,10 @@ Every project in this repository is inspired by a realistic administration scena
 
 ## Projects
 
-| Ticket | Project                            | Status             |
-| ------ | ---------------------------------- | ------------------ | ---------- |
-| #001   | Password Expiration Auditor (PEXA) | Completed          |
-| #002   | **STAyzer**                        | SSH Trust Analyzer | [] Planned |
+| Ticket | Project                            | Status    |
+| ------ | ---------------------------------- | --------- |
+| #001   | Password Expiration Auditor (PEXA) | Completed |
+| #002   | SSH Trust Analyzer(STAyzer)        | Planned   |
 
 ## Documentation
 

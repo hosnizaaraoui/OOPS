@@ -15,7 +15,7 @@ async def run_password_expiration_audit(
     logger.verbose = verbose
     start_time = perf_counter()
 
-    audit_results: list[HostModel] = []
+    trust_results: list[HostModel] = []
 
     filters = parse_filter_expression(filter_expression)
 
@@ -98,7 +98,7 @@ async def run_password_expiration_audit(
             )
 
         if host_result.users:
-            audit_results.append(host_result)
+            trust_results.append(host_result)
 
             logger.success(
                 f"Host '{host.hostname}' completed with "
@@ -111,8 +111,8 @@ async def run_password_expiration_audit(
 
     logger.success(
         f"Audit completed successfully. "
-        f"{len(audit_results)} host(s) included in the final report."
+        f"{len(trust_results)} host(s) included in the final report."
     )
     elapsed = perf_counter() - start_time
 
-    return audit_results, elapsed
+    return trust_results, elapsed

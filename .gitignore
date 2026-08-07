@@ -1,1 +1,6 @@
 site/
+__pycache__/
+.venv/
+.docker/
+inventory.txt
+docker-compose.yml

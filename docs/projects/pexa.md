@@ -111,19 +111,19 @@ If the username is omitted, the value supplied with `--user` will be used.
 Audit hosts from an inventory file:
 
 ```bash
-python main.py audit --inventory inventory.txt
+.venv/bin/python3 main.py audit --inventory inventory.txt
 ```
 
 Audit a specific host:
 
 ```bash
-python main.py audit --host 192.168.1.20
+.venv/bin/python3 main.py audit --host 192.168.1.20
 ```
 
 Audit multiple hosts:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --host web01 \
     --host db01 \
     --host mail01
@@ -132,7 +132,7 @@ python main.py audit \
 Specify the SSH username:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --user admin
 ```
@@ -140,7 +140,7 @@ python main.py audit \
 Exclude the local machine:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --exclude-localhost
 ```
@@ -148,7 +148,7 @@ python main.py audit \
 Enable verbose mode:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --verbose
 ```
@@ -182,7 +182,7 @@ Multiple filters can be combined.
 Generate JSON:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --export json
 ```
@@ -190,7 +190,7 @@ python main.py audit \
 Generate CSV:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --export csv
 ```
@@ -198,7 +198,7 @@ python main.py audit \
 Generate HTML:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --export html
 ```
@@ -206,7 +206,7 @@ python main.py audit \
 Generate multiple reports simultaneously:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --export json \
     --export csv \
@@ -216,7 +216,7 @@ python main.py audit \
 Specify the output filename:
 
 ```bash
-python main.py audit \
+.venv/bin/python3 main.py audit \
     --inventory inventory.txt \
     --export html \
     --output weekly_report

@@ -5,7 +5,7 @@ from utils.logger import logger
 from models.host import HostModel
 
 
-def export_json(output: str, trust_results: list[HostModel]):
+def export_json(output: str, audit_results: list[HostModel]):
     """Export audit results to a JSON file."""
     logger.verbose = True
 
@@ -14,7 +14,7 @@ def export_json(output: str, trust_results: list[HostModel]):
 
     with open(output, "w") as file:
         json.dump(
-            [asdict(host) for host in trust_results],
+            [asdict(host) for host in audit_results],
             file,
             indent=4,
             default=str,

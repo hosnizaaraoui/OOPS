@@ -4,7 +4,7 @@ from utils.logger import logger
 from models.host import HostModel
 
 
-def export_csv(output: str, trust_results: list[HostModel]):
+def export_csv(output: str, audit_results: list[HostModel]):
     """Export audit results to a CSV file."""
     logger.verbose = True
     if not output.endswith(".csv"):
@@ -22,7 +22,7 @@ def export_csv(output: str, trust_results: list[HostModel]):
             "Expiration Date",
         ])
 
-        for host in trust_results:
+        for host in audit_results:
             for user in host.users:
                 writer.writerow([
                     host.hostname,

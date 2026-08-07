@@ -143,23 +143,23 @@ def audit(
         exclude_localhost=exclude_localhost,
     )
 
-    trust_results, elapsed = asyncio.run(
+    audit_results, elapsed = asyncio.run(
         run_password_expiration_audit(target_hosts,
                                       filter_expression, verbose)
     )
     generated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print_report(trust_results, _format_duration(elapsed), generated_at)
+    print_report(audit_results, _format_duration(elapsed), generated_at)
 
     if "json" in export:
-        export_json(output, trust_results)
+        export_json(output, audit_results)
 
     if "csv" in export:
-        export_csv(output, trust_results)
+        export_csv(output, audit_results)
 
     if "html" in export:
         export_html(
             output,
-            trust_results,
+            audit_results,
             _format_duration(elapsed),
             generated_at,
         )

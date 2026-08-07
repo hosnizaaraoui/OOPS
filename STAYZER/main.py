@@ -5,7 +5,7 @@ import click
 from reports.csv import export_csv
 from reports.html import export_html
 from reports.json import export_json
-from collectors.analyzer import analyze_ssh_trust
+from collectors.analyzer import analyze_ssh_trust, check_duplications
 from hosts.local import LocalHost
 from hosts.ssh import SSHHost
 from datetime import datetime
@@ -143,23 +143,25 @@ def analyze(
         exclude_localhost=exclude_localhost,
     )
 
-    audit_results, elapsed = asyncio.run(
+    trust_results, elapsed = asyncio.run(
         analyze_ssh_trust(target_hosts,
                           filter_expression, verbose)
     )
     generated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    # print_report(audit_results, _format_duration(elapsed), generated_at)
+
+    check_duplications(trust_results)
+    # print_report(trust_results, _format_duration(elapsed), generated_at)
 
     if "json" in export:
-        export_json(output, audit_results)
+        export_json(output, trust_results)
 
     if "csv" in export:
-        export_csv(output, audit_results)
+        export_csv(output, trust_results)
 
     if "html" in export:
         export_html(
             output,
-            audit_results,
+            trust_results,
             _format_duration(elapsed),
             generated_at,
         )

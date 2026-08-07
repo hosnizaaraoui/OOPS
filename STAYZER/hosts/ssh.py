@@ -17,7 +17,7 @@ class SSHHost(Host):
                 known_hosts=None
             ) as conn:
                 result = await conn.run(
-                    " ".join(command),
+                    command,
                     check=True
                 )
                 return (result.stdout)
